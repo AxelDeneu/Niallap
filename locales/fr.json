@@ -1,0 +1,106 @@
+{
+	"command": {
+		"help": {
+			"description": "Liste toute les commandes disponibles.",
+			"info": {
+				"commandlist": "Voici la liste des commandes disponibles : "
+			}
+		},
+		"prefix": {
+			"description": "Change le préfixe de toute les commandes. Par défaut : \"%s\".",
+			"info": {
+				"modified": "Le préfixe a été modifié, consultez la liste des commandes en écrivant : \"%shelp\"."
+			},
+			"warning": {
+				"toolong": "Le préfixe doit faire 1 caractère de long.",
+				"missing": "Vous devez spécifier un préfixe."
+			}
+		},
+		"join": {
+			"description": "Connecte Niallap au salon vocal dans lequel vous vous situez.",
+			"info": {
+				"connected": "Je suis désormais connecté à votre salon vocal."
+			},
+			"warning": {
+				"alreadyconnected": "Je suis déjà connecté à votre salon."
+			}
+		},
+		"play": {
+			"description": "Joue la musique spécifiée. Doit obligatoirement être un lien YouTube.",
+			"info": {
+				"letsgo": "C'est parti !",
+				"nextsong": "Lecture de la musique suivant : %s"
+			},
+			"warning": {
+				"emptyplaylist": "Liste de lecture vide."
+			}
+		},
+		"stop": {
+			"description": "Arrête la musique actuellement jouée.",
+			"warning": {
+				"nocurrentsong": "Aucune musique n'est actuellement jouée."
+			},
+			"info": {
+				"end": "Fin de la lecture."
+			}
+		},
+		"next": {
+			"description": "Joue la musique suivante dans la liste de lecture.",
+			"warning": {
+				"nocurrentsong": "Aucune musique n'est actuellement jouée."
+			}
+		},
+		"add": {
+			"description": "Ajoute la musique spécifiée à la liste de lecture.",
+			"info": {
+				"added": "Musique ajoutée à la liste de lecture."
+			},
+			"warning": {
+				"invalidurl": "Le lien spécifié doit être une url YouTube valide."
+			}
+		},
+		"quit": {
+			"info": {
+				"disconnecting": "Je me déconnecte..."
+			},
+			"warning": {
+				"notconnected": "Je ne suis connecté à aucun salon vocal."
+			},
+			"description": "Fait quitter Niallap du salon."
+		},
+		"pause": {
+			"info": {
+				"paused": "Lecture en pause."
+			}
+		},
+		"resume": {
+			"info": {
+				"resumed": "Reprise de la lecture."
+			}
+		},
+		"playlists": {
+			"description": "Module d'enregistrement de playlists.",
+			"create": {
+				"warning": {
+					"noname": "command.playlists.create.warning.noname"
+				},
+				"info": {
+					"created": "command.playlists.create.info.created"
+				}
+			},
+			"list": {
+				"info": {
+					"playlist": "**{{name}}** : {{length}} musiques",
+					"playlistintro": "Liste des playlists : "
+				}
+			}
+		}
+	},
+	"bot": {
+		"ready": "Je suis pret !",
+		"connection": {
+			"success": "Connexion au serveur réussie !",
+			"error": "Echec de la connexion au serveur."
+		}
+	}
+}
