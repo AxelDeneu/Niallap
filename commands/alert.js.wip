@@ -1,0 +1,20 @@
+const { prefix } = require('../config/config.json');
+const Discord = require('discord.js');
+const log = require('fancy-log');
+
+module.exports = {
+    name: 'alert',
+    description: 'Ask the bot to programm or delete an alert.',
+    usage: '[domain] [action] [alert subject]',
+	cooldown: 2,
+    execute(message, args) {
+		if(message.channel.type === 'dm') {
+			message.reply('you need to be in a server to let me interact with alerts.')
+			return;
+		}
+		if(!args.length) {
+			message.reply('you need to give me a YouTube video url.');
+			return;
+		}
+    },
+};

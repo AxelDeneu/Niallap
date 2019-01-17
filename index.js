@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const { prefix, token } = require('./config/config.json');
 const fs = require('fs');
 const log = require('fancy-log');
+const clc = require('cli-color');
 
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
@@ -15,8 +16,14 @@ for (const file of commandFiles) {
 
 const cooldowns = new Discord.Collection();
 
+global.music = {
+	voiceConnection: false,
+	song: false,
+	queue: new Array()
+}
+
 client.once('ready', () => {
-    log.info('Ready!');
+    log.info(clc.green('Ready!'));
 });
 
 client.on('message', message => {
@@ -65,10 +72,11 @@ client.on('message', message => {
 	setTimeout(() => timestamps.delete(message.author.id), cooldownAmount);
 
 	try {
+		log.info(`[`+clc.blue(message.member.displayName)+`] [`+clc.cyan('execute command')+`] -> ${command.name}`);
 		command.execute(message, args);
 	}
 	catch (error) {
-    	log.error(error);
+    	log.error(clc.red(error));
     	message.reply('there was an error trying to execute that command!');
 	}
 });
