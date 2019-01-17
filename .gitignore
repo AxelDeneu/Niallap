@@ -81,3 +81,5 @@ config/config.json
 
 # Disable playlists
 db/playlists.json
+db/youtube.json
+*.swp
